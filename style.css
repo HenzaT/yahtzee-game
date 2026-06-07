@@ -13,7 +13,6 @@
   flex-direction: row;
   align-items: center;
 }
-
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -70,7 +69,7 @@ body {
   cursor: not-allowed;
 }
 
-button {
+button, input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   background-color: var(--white);
@@ -87,8 +86,10 @@ button.roll:disabled {
 button.roll {
   padding: 1rem;
 }
-button.end-turn {
+.rounded {
   border-radius: 40px;
+}
+button.end-turn, button.next-player {
   display: none;
 }
 
@@ -99,10 +100,12 @@ button.end-turn {
 
 form.choose-score {
   display: none;
+  gap: 1rem;
 }
 
 table, th, td {
   border: 1px solid var(--dark-red);
+  background-color: var(--white);
 }
 th, td {
   padding: 0.3rem;

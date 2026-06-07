@@ -18,21 +18,21 @@
       <article class="player-1 player-dice-card flex-col">
         <h2 class="instructions">Roll to begin!</h2>
         <div class="dice-group flex-row">
-          <img src="public/dice-1.svg" alt="dice showing 1" class="dice">
-          <img src="public/dice-2.svg" alt="dice showing 2" class="dice">
-          <img src="public/dice-3.svg" alt="dice showing 3" class="dice">
-          <img src="public/dice-4.svg" alt="dice showing 4" class="dice">
-          <img src="public/dice-5.svg" alt="dice showing 5" class="dice">
+          <img src="public/dice-1.svg" alt="dice showing 1" class="dice" data-value="1">
+          <img src="public/dice-2.svg" alt="dice showing 2" class="dice" data-value="2">
+          <img src="public/dice-3.svg" alt="dice showing 3" class="dice" data-value="3">
+          <img src="public/dice-4.svg" alt="dice showing 4" class="dice" data-value="4">
+          <img src="public/dice-5.svg" alt="dice showing 5" class="dice" data-value="5">
         </div>
-        <button type="button" class="roll">
+        <button type="button" class="roll rounded">
           <img src="public/shuffle.svg" alt="shuffle icon" class="shuffle flex-row">
         </button>
         <div class="flex-row" style="gap: 1rem">
           <div class="counter"><span class="number">3</span> rolls left</div>
-          <button type="button" class="end-turn">End Turn?</button>
+          <button type="button" class="end-turn rounded">End Turn?</button>
         </div>
       </article>
-      <form action="" class="choose-score flex-row">
+      <form action="" class="choose-score flex-col">
         <select name="scores" id="scores">
           <option value="aces">Aces</option>
           <option value="twos">Twos</option>
@@ -48,15 +48,14 @@
           <option value="yahtzee">Yahtzee</option>
           <option value="no-score">No Score</option>
         </select>
-        <div class="score-input flex-col">
+        <!-- <div class="score-input flex-col">
           <label for="score">Score</label>
           <input type="number" name="score" id="score">
-        </div>
-        <input type="submit" value="Submit">
+        </div> -->
+        <input type="submit" value="Submit" class="rounded">
       </form>
     </div>
     <article class="player-1 player-scorecard">
-      <h2>Player 1 Score</h2>
       <div class="tables flex-row">
         <table class="upper-section">
           <tr>
@@ -175,7 +174,7 @@
       </div>
     </article>
   </section>
-  <button type="button">Next Player</button>
+  <button type="button" class="next-player rounded">Next Player</button>
 </body>
 <script src="script.js"></script>
 </html>
