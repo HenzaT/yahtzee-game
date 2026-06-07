@@ -1,0 +1,113 @@
+/* variables */
+:root {
+  --dark-red: #23020b;
+  --white: #fff;
+  --pink: #f7d6df;
+  --black: #000000;
+  --hover: #ff9d9d;
+}
+
+/* flexbox classes */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* main styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--dark-red);
+  color: var(--white);
+}
+
+.player-1 {
+  justify-content: space-evenly;
+}
+
+.player-dice-card, .player-scorecard, form {
+  background: var(--pink);
+  color: var(--black);
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.player-dice-card {
+  gap: 1rem;
+}
+
+.dice-group {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dice {
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 5rem;
+}
+.shuffle {
+  width: 2rem;
+}
+
+.locked-dice {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+button:hover {
+  background-color: var(--hover);
+}
+button.roll:disabled {
+  cursor: not-allowed;
+}
+button.roll {
+  padding: 1rem;
+}
+button.end-turn {
+  border-radius: 40px;
+  display: none;
+}
+
+.counter {
+  color: var(--black);
+  font-size: 2rem;
+}
+
+form.choose-score {
+  display: none;
+}
+
+table, th, td {
+  border: 1px solid var(--dark-red);
+}
+th, td {
+  padding: 0.3rem;
+}
+.tables {
+  gap: 1rem;
+  align-items: normal;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Yahtzee</title>
+</head>
+<body>
+  <header>
+    <h1>Player 1</h1>
+  </header>
+  <section class="player-1 flex-row">
+    <div class="flex-col" style="gap: 1rem">
+      <article class="player-1 player-dice-card flex-col">
+        <h2 class="instructions">Roll to begin!</h2>
+        <div class="dice-group flex-row">
+          <img src="public/dice-1.svg" alt="dice showing 1" class="dice">
+          <img src="public/dice-2.svg" alt="dice showing 2" class="dice">
+          <img src="public/dice-3.svg" alt="dice showing 3" class="dice">
+          <img src="public/dice-4.svg" alt="dice showing 4" class="dice">
+          <img src="public/dice-5.svg" alt="dice showing 5" class="dice">
+        </div>
+        <button type="button" class="roll">
+          <img src="public/shuffle.svg" alt="shuffle icon" class="shuffle flex-row">
+        </button>
+        <div class="flex-row" style="gap: 1rem">
+          <div class="counter"><span class="number">3</span> rolls left</div>
+          <button type="button" class="end-turn">End Turn?</button>
+        </div>
+      </article>
+      <form action="" class="choose-score flex-row">
+        <select name="scores" id="scores">
+          <option value="aces">Aces</option>
+          <option value="twos">Twos</option>
+          <option value="threes">Threes</option>
+          <option value="fours">Fours</option>
+          <option value="fives">Fives</option>
+          <option value="sixes">Sixes</option>
+          <option value="three-of-kind">Three of a kind</option>
+          <option value="four-of-kind">Four of a kind</option>
+          <option value="full-house">Full House</option>
+          <option value="sm-straight">Sm Straight</option>
+          <option value="lg-straight">Lg Straight</option>
+          <option value="yahtzee">Yahtzee</option>
+          <option value="no-score">No Score</option>
+        </select>
+        <div class="score-input flex-col">
+          <label for="score">Score</label>
+          <input type="number" name="score" id="score">
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <article class="player-1 player-scorecard">
+      <h2>Player 1 Score</h2>
+      <div class="tables flex-row">
+        <table class="upper-section">
+          <tr>
+            <th>Upper Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <th>Aces</th>
+            <th>Count and add aces only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Twos</th>
+            <th>Count and add twos only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Threes</th>
+            <th>Count and add threes only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Fours</th>
+            <th>Count and add fours only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Fives</th>
+            <th>Count and add fives only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Sixes</th>
+            <th>Count and add sixes only</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Total Score</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Bonus</th>
+            <th>If total score is 63+, score 35</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+        <table class="lower-section">
+          <tr>
+            <th>Lower Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <th>3 of a kind</th>
+            <th>Add total of all dice</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>4 of a kind</th>
+            <th>Add total of all dice</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Full House</th>
+            <th>Score 25</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Sm Straight</th>
+            <th>Score 30</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Lg Straight</th>
+            <th>Score 40</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Yahtzee</th>
+            <th>Score 50</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Chance</th>
+            <th>Add total of all dice</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Yahtzee Bonus</th>
+            <th>Score 25</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Total of Lower Section</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Total of Upper Section</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Grand Total</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
+    </article>
+  </section>
+  <button type="button">Next Player</button>
+</body>
+<script src="script.js"></script>
+</html>
